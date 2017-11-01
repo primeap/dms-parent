@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 <!-- Theme Made By www.w3schools.com - No Copyright -->
-<title>Bootstrap Theme Simply Me</title>
+<title>Web application using Rest Ejb Jpa TomeePlum Servlet 3.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
