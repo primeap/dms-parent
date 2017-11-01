@@ -5,28 +5,50 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<link rel="shortcut icon" href="favicon.ico"/>
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/dms.js"></script>
-
 <link rel="stylesheet" href="css/dms.css">
+
+
 
 <title>Demo rest ejb jpa maven tomee app</title>
 </head>
 <body>
 
+	<div id="outer" >
+		<div id="inner">
 
-<header class="cont-slider">
-    <section class="slider">
-      <article class="slide one"><span1>One</span></article><!--
-      --><article class="slide two"><span>< Two</span></article><!--
-      --><article class="slide three"><span> Three</span></article><!--
-      --><article class="slide four"><span>Four</span></article><!--
-      --><article class="slide five"><span>Five</span></article>
-    </section>
-</header>
-
-
+			<div id="slideshow">
+				<div>
+					<img src="images/b1.jpg">
+				</div>
+				<div>
+					<img src="images/b2.jpg">
+				</div>
+				<div>
+					<img src="images/b3.jpg">
+				</div>
+				<div>
+					<img src="images/b4.jpg">
+				</div>
+				<div>
+					<img src="images/b5.jpg">
+				</div>
+				<div>
+					<img src="images/b6.jpg">
+				</div>
+				<div>
+					<img src="images/b7.jpg">
+				</div>
+				<div>
+					<img src="images/b8.jpg">
+				</div>
+				<div>
+					<img src="images/b9.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
