@@ -15,6 +15,11 @@
 			<artifactId>dms-models</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>org.ap.dms</groupId>
+			<artifactId>dms-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 
