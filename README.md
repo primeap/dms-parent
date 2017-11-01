@@ -16,6 +16,7 @@
 -  Maven
 
 ### Configuration
+- Copy h2 jdbc jar to tomee.xx/lib
 - Configure DS : copy tomeee.xml to eclipse server and paste following ( persistance.xml is pointing to jndi name PostgresDbDs  )
 ```xml
 <Resource id="PostgresDbDs" type="javax.sql.DataSource"> 
