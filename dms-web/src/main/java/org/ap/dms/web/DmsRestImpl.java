@@ -17,7 +17,7 @@ public class DmsRestImpl implements DmsRest {
 			List<DmsRequest> list = services.getAllDms();
 			return Response.ok(list).build();
 		} catch (Exception e) {
-			return Response.status(Response.Status.EXPECTATION_FAILED).entity(e.getMessage()).build();
+			return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
 		}
 
 	}
@@ -28,7 +28,7 @@ public class DmsRestImpl implements DmsRest {
 			services.deleteDms(id);
 			return Response.ok(" Dms request deleted wit id :" + id).build();
 		} catch (Exception e) {
-			return Response.status(Response.Status.EXPECTATION_FAILED)
+			return Response.status(Response.Status.BAD_REQUEST)
 					.entity(" Dms request deleted wit id :" + id + " " + e.getMessage()).build();
 		}
 	}
