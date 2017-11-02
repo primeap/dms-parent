@@ -14,12 +14,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @Table(name = "TBL_DMS_REQUEST")
 @XmlRootElement
-@NamedQueries({ @NamedQuery(name = "DmsRequest.getAll", query = "from DmsRequest e ") })
-public class DmsRequest {
+@NamedQueries({ @NamedQuery(name = "DmsRequestDo.getAll", query = "Select e from DmsRequestDo e ") })
+public class DmsRequestDo {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@SequenceGenerator(name = "movieIdSequence", sequenceName = "movies_id_seq", allocationSize = 1, initialValue = 100000)
+	@SequenceGenerator(name = "movieIdSequence", sequenceName = "dms-req-id", allocationSize = 1, initialValue = 100000)
 	@Column(name = "ID")
 	private long id;
 

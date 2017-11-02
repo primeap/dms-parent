@@ -6,7 +6,7 @@ import javax.ejb.EJB;
 import javax.ejb.Stateful;
 
 import org.ap.dms.dao.DmsDao;
-import org.ap.dms.models.entity.DmsRequest;
+import org.ap.dms.models.entity.DmsRequestDo;
 
 @Stateful
 public class DmsServicesImpl implements DmsServices{
@@ -14,7 +14,7 @@ public class DmsServicesImpl implements DmsServices{
 	@EJB
 	private DmsDao dao;
 
-	public void addDms(DmsRequest dms) throws Exception {
+	public void addDms(DmsRequestDo dms) throws Exception {
 		dao.addDms(dms);
 	}
 
@@ -22,7 +22,7 @@ public class DmsServicesImpl implements DmsServices{
 		dao.deleteDms(id);
 	}
 
-	public List<DmsRequest> getAllDms() throws Exception {
+	public List<DmsRequestDo> getAllDms() throws Exception {
 		return dao.getAllDms();
 	}
 

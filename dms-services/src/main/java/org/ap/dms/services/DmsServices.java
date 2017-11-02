@@ -2,14 +2,14 @@ package org.ap.dms.services;
 
 import java.util.List;
 
-import org.ap.dms.models.entity.DmsRequest;
+import org.ap.dms.models.entity.DmsRequestDo;
 
 public interface DmsServices {
 
-	List<DmsRequest> getAllDms() throws Exception;
+	List<DmsRequestDo> getAllDms() throws Exception;
 
 	void deleteDms(long id) throws Exception;
 
-	void addDms(DmsRequest dms) throws Exception;
+	void addDms(DmsRequestDo dms) throws Exception;
 
 }

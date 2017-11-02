@@ -5,7 +5,7 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
-import org.ap.dms.models.entity.DmsRequest;
+import org.ap.dms.models.entity.DmsRequestDo;
 
 @Stateless
 public class DmsDao extends Dao{
@@ -14,16 +14,16 @@ public class DmsDao extends Dao{
     private Dao dao;
 	
 	
-	public void addDms(DmsRequest dms) throws Exception {
+	public void addDms(DmsRequestDo dms) throws Exception {
 		dao.create(dms);
     }
 
     public void deleteDms(long  id) throws Exception {
-        dao.delete(DmsRequest.class, id);
+        dao.delete(DmsRequestDo.class, id);
     }
 
-    public List<DmsRequest> getAllDms() throws Exception {
-        return dao.getAll( DmsRequest.class );
+    public List<DmsRequestDo> getAllDms() throws Exception {
+        return dao.getAll( DmsRequestDo.class );
     }
 	
 	

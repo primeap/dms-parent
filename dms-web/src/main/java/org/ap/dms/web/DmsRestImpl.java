@@ -5,7 +5,7 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.ws.rs.core.Response;
 
-import org.ap.dms.models.entity.DmsRequest;
+import org.ap.dms.models.entity.DmsRequestDo;
 import org.ap.dms.services.DmsServices;
 
 public class DmsRestImpl implements DmsRest {
@@ -14,7 +14,7 @@ public class DmsRestImpl implements DmsRest {
 
 	public Response getAllDms() {
 		try {
-			List<DmsRequest> list = services.getAllDms();
+			List<DmsRequestDo> list = services.getAllDms();
 			return Response.ok(list).build();
 		} catch (Exception e) {
 			return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
@@ -32,4 +32,25 @@ public class DmsRestImpl implements DmsRest {
 					.entity(" Dms request deleted wit id :" + id + " " + e.getMessage()).build();
 		}
 	}
+
+	// @Override
+	public Response addDms(String title, String description) {
+		try {
+			DmsRequestDo dms = new DmsRequestDo();
+			dms.setTitle(title);
+			dms.setShortDescription(description);
+			services.addDms(dms);
+		} catch (Exception e) {
+			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Couldn't add " + e.getMessage())
+					.build();
+		}
+
+		return null;
+	}
+
+	// @Override
+	public Response updateDms(DmsRequestDo dto) {
+		return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Not implemented......... ").build();
+	}
+
 }
