@@ -13,7 +13,8 @@
 - TomEE Plum 7.2
 - H2 db
 - Git client
--  Maven
+- Maven
+- Eclipselink
 
 ### Configuration
 - Copy h2 jdbc jar to tomee.xx/lib
@@ -28,3 +29,8 @@
 	</Resource>
 ```
 - H2 db config
+
+### Test urls
+- http://localhost:8080/dms-web/rest/dms
+- http://localhost:8080/dms-web/rest/dms/7
+- http://localhost:8080/dms-web/rest/dms/title1/desc1
