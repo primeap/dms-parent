@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "TBL_DMS_REQUEST")
 @XmlRootElement
 @NamedQueries({ @NamedQuery(name = "DmsRequestDo.getAll", query = "Select e from DmsRequestDo e ") })
-public class DmsRequestDo {
+public class DmsRequestDo extends CommonDo {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
