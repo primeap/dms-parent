@@ -20,11 +20,11 @@ public class Dao {
         return em.merge(e);
     }
 
-    public <E> void delete(Class<E> clazz, long id) {
+    public <E> void delete(Class<E> clazz, Object id) {
         em.remove(em.find(clazz, id));
     }
 
-    public <E> E find(Class<E> clazz, long id) {
+    public <E> E find(Class<E> clazz, Object id) {
         return em.find(clazz, id);
     }
 

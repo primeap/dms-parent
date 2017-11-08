@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "TBL_DMS_REQUEST")
 @XmlRootElement
 @NamedQueries({ @NamedQuery(name = "DmsRequestDo.getAll", query = "Select e from DmsRequestDo e ") })
-public class DmsRequestDo extends CommonDo {
+public class DmsRequestDo extends CommonDo implements BaseEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -56,6 +56,11 @@ public class DmsRequestDo extends CommonDo {
 	@Override
 	public String toString() {
 		return "DmsRequest [id=" + id + ", shortDescription=" + shortDescription + ", title=" + title + "]";
+	}
+
+	@Override
+	public Object getPrimaryKey() {
+		return id;
 	}
 
 }

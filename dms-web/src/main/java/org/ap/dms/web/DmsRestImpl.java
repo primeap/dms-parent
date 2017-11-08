@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.ws.rs.core.Response;
 
+import org.ap.dms.commons.util.RestUtil;
 import org.ap.dms.models.entity.DmsRequestDo;
 import org.ap.dms.services.DmsServices;
 
@@ -15,9 +16,9 @@ public class DmsRestImpl implements DmsRest {
 	public Response getAllDms() {
 		try {
 			List<DmsRequestDo> list = services.getAllDms();
-			return Response.ok(list).build();
+			return RestUtil.success("Success ", list);
 		} catch (Exception e) {
-			return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
+			return RestUtil.error("Error ", e.getMessage());
 		}
 
 	}
