@@ -5,24 +5,25 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateful;
 
-import org.ap.dms.dao.DmsDao;
-import org.ap.dms.models.entity.DmsRequestDo;
+import org.ap.dms.dao.RequestDao;
+import org.ap.dms.models.entity.RequestDo;
 
 @Stateful
-public class DmsServicesImpl implements DmsServices{
+public class DmsServicesImpl implements RequestServices{
 
 	@EJB
-	private DmsDao dao;
-
-	public void addDms(DmsRequestDo dms) throws Exception {
+	private RequestDao dao;
+	
+	
+	public void addRequest(RequestDo dms) throws Exception {
 		dao.addDms(dms);
 	}
 
-	public void deleteDms(long id) throws Exception {
+	public void deleteRequest(long id) throws Exception {
 		dao.deleteDms(id);
 	}
 
-	public List<DmsRequestDo> getAllDms() throws Exception {
+	public List<RequestDo> getAllRequest() throws Exception {
 		return dao.getAllDms();
 	}
 

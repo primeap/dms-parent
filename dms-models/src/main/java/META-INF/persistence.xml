@@ -4,7 +4,7 @@
 	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
 	<persistence-unit name="dms-pu" transaction-type="JTA">
 		<jta-data-source>PostgresDbDs</jta-data-source>
-		<class>org.ap.dms.models.entity.DmsRequestDo</class>
+		<class>org.ap.dms.models.entity.RequestDo</class>
 
 		<properties>
 			<!-- EclipseLink should create the database schema automatically -->
