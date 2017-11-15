@@ -15,12 +15,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "TBL_ATTACHMENT")
 @XmlRootElement
 @NamedQueries({ @NamedQuery(name = "AttachmentDo.getAll", query = "Select e from AttachmentDo e ") })
-public class AttachmentDo {
+public class AttachmentDo extends CommonDo{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "ID")
 	private Long id;
+
+	@Column(name = "NAME")
+	private String name;
 
 	@Column(name = "ATTACHMENT")
 	@Lob
@@ -32,6 +35,14 @@ public class AttachmentDo {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public byte[] getAttachment() {
